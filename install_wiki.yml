@@ -2,6 +2,7 @@
 
 - name: ping
   hosts: group_mediawiki
+  become: yes
   tasks:
     - name: ping MachineCible
       ping:

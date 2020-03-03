@@ -3,6 +3,7 @@
 - name: ping
   hosts: group_mediawiki
   become: yes
+  ask-become-pass: no
   tasks:
     - name: ping_meg_serv
       ping:

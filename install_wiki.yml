@@ -2,9 +2,8 @@
 
 - name: ping
   hosts: group_mediawiki
-  become: yes
   tasks:
-    - name: ping_meg_serv
+    - name: ping MachineCible
       ping:
 
 # TOOLS
@@ -28,6 +27,11 @@
         - php5.6-fpm
         - php5.6-mysql
         - php5.6-xml
+        - php5.6-curl
+        - php5.6-gd
+        - php5.6-intl
+        - php5.6-json
+        - php5.6-mbstring
 
     - name: remove apache2
       apt:
